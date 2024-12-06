@@ -1,0 +1,98 @@
+:root {
+    --background-color: black;
+    --card-background: white;
+    --text-color: black;
+    --button-color: #007BFF;
+    --button-text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.todo__container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 500px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo__header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo__title {
+    margin: 0;
+}
+
+.todo__input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo__input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.todo__button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo__button:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat hover */
+}
+
+.todo__button--remove {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+}
+
+.todo__button--remove:hover {
+    background-color: #cc0000;
+}
+
+.todo__list {
+    list-style: none; /* Hilangkan bullet pada list */
+    padding: 0;
+    margin: 0;
+}
+
+.todo__item {
+    display: flex; /* Mengatur teks dan tombol dalam satu baris */
+    justify-content: space-between; /* Teks di kiri, tombol di kanan */
+    align-items: center; /* Sejajarkan secara vertikal */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: var(--card-background);
+}
+
+.todo__text {
+    flex: 1; /* Agar teks mengambil ruang maksimal */
+    margin-right: 10px; /* Beri jarak antara teks dan tombol */
+}

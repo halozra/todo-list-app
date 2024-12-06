@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="todo">
+        <div class="todo__container">
+            <header class="todo__header">
+                <h2 class="todo__title">To Do List</h2>
+            </header>
+            <div class="todo__input-group">
+                <form action="/" method="post">
+                    <input
+                        type="text"
+                        name="inputHope"
+                        class="todo__input"
+                        placeholder="Input Your Text Bro.."
+                        aria-label="To do input"
+                        required
+                    >
+                    <button
+                        type="submit"
+                        class="todo__button todo__button--add"
+                        aria-label="Add item"
+                    >
+                        ADD
+                    </button>
+                </form>
+            </div>
+            <div class="todo__list-wrapper">
+                <ul class="todo__list">
+                    <% datas.forEach(element => { %>
+                        <li class="todo__item">
+                            <span class="todo__text"><%= element.title %></span>
+                            <form action="/<%= element.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="todo__button todo__button--remove">
+                                    Remove
+                                </button>
+                            </form>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
